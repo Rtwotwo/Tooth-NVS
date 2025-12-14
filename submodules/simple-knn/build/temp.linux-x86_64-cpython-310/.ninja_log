@@ -1,0 +1,4 @@
+# ninja log v7
+0	12987	1765712469697315437	/data2/dataset/Redal/work_tooth_nvs/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/simple_knn.o	cdd7d489ca432040
+0	20072	1765712469697315437	/data2/dataset/Redal/work_tooth_nvs/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/ext.o	bc5c5497db50058f
+1	163248	1765712469698315438	/data2/dataset/Redal/work_tooth_nvs/submodules/simple-knn/build/temp.linux-x86_64-cpython-310/spatial.o	6d8e430d686cfaab

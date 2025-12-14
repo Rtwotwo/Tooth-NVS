@@ -1,0 +1,12 @@
+# ignore papers
+papers/*.pdf
+
+# ignore data folder
+data/
+
+# ignore logs folder
+logs/
+
+# ignore clones folder
+clones/
+
