@@ -1,6 +1,3 @@
-[submodule "submodules/depth-diff-gaussian-rasterization"]
-	path = submodules/depth-diff-gaussian-rasterization
-	url = https://gitclone.com/github.com/ingra14m/depth-diff-gaussian-rasterization.git
 [submodule "submodules/simple-knn"]
 	path = submodules/simple-knn
 	url = https://gitlab.inria.fr/bkerbl/simple-knn.git
@@ -11,3 +8,4 @@
 [submodule "submodules/fused-ssim"]
 	path = submodules/fused-ssim
 	url = https://github.com/rahul-goel/fused-ssim.git
+
