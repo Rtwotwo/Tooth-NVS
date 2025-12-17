@@ -37,14 +37,6 @@ We processed four sets of videos, each approximately 20 to 30 seconds long, cont
 |tooth_4(tooth)|30.171770095825195|0.9251460433006287|0.40851619839668274|
 |tooth_5(tooth)|28.754833221435547|0.9476994276046753|0.3846614956855774|
 
-| Index | Point Cloud | New-Novel Synthetic |
-|-------|-------------|---------------------|
-|tooth_1|![tooth_1](assets/media/tooth_1.gif)|![tooth_1](assets/tooth_1.gif)|
-|tooth_2|![tooth_2](assets/media/tooth_2.gif)|![tooth_2](assets/tooth_2.gif)|
-|tooth_3|![tooth_3](assets/media/tooth_3.gif)|![tooth_3](assets/tooth_3.gif)|
-|tooth_4|![tooth_4](assets/media/tooth_4.gif)|![tooth_4](assets/tooth_4.gif)|
-|tooth_5|![tooth_5](assets/media/tooth_5.gif)|![tooth_5](assets/tooth_5.gif)|
-
 | Index| tooth_1| tooth_2| tooth_3| tooth_4| tooth_5|
 |------|--------|--------|--------|--------|--------|
 | Point Cloud|[tooth_1](assets/media/tooth_1.gif)| [tooth_2](assets/media/tooth_2.gif)| [tooth_3](assets/media/tooth_3.gif)| [tooth_4](assets/media/tooth_4.gif)| [tooth_5](assets/media/tooth_5.gif)|
