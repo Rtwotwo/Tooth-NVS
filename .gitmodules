@@ -9,3 +9,13 @@
 	path = submodules/fused-ssim
 	url = https://github.com/rahul-goel/fused-ssim.git
 
+
+[submodule "clones/VGGT-X"]
+	path = clones/VGGT-X
+	url = https://github.com/Linketic/VGGT-X.git
+[submodule "clones/gaussian-splatting"]
+	path = clones/gaussian-splatting
+	url = https://github.com/graphdeco-inria/gaussian-splatting.git
+[submodule "clones/nope-nerf"]
+	path = clones/nope-nerf
+	url = https://github.com/ActiveVisionLab/nope-nerf.git

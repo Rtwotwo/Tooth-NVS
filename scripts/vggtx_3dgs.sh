@@ -15,7 +15,7 @@ for id in "${TOOTH_ID[@]}"; do
     scene_dir="${ROOT_DIR}/tooth_${id}"
     echo "[INFO] 正在处理的场景: ${scene_dir}, 时间: $(date +"%Y-%m-%d %H:%M:%S")"
 
-    CUDA_VISIBLE_DEVICES=${GPU} python demo_colmap.py \
+    CUDA_VISIBLE_DEVICES=${GPU} python vggtx_colmap.py \
         --scene_dir "${scene_dir}" \
         --shared_camera \
         --use_ga
