@@ -41,8 +41,10 @@ We processed four sets of videos, each approximately 20 to 30 seconds long, cont
 |------|--------|--------|--------|--------|--------|
 |Point Cloud|![tooth_1](assets/media/tooth_1.gif)|![tooth_2](assets/media/tooth_2.gif)|![tooth_3](assets/media/tooth_3.gif)|![tooth_4](assets/media/tooth_4.gif)|![tooth_5](assets/media/tooth_5.gif)|
 | New-Novel Synthetic |![tooth_1](assets/tooth_1.gif)|![tooth_2](assets/tooth_2.gif)|![tooth_3](assets/tooth_3.gif)|![tooth_4](assets/tooth_4.gif)|![tooth_5](assets/tooth_5.gif)|
-| New-Novel Synthetic |![tooth_1](assets/tooth_1.mp4)|![tooth_2](assets/tooth_2.mp4)|![tooth_3](assets/tooth_3.mp4)|![tooth_4](assets/tooth_4.mp4)|![tooth_5](assets/tooth_5.mp4)|
+|Ground Truth| ![tooth](./assets/images/tooth_1_gt.png)|![tooth](./assets/images/tooth_2_gt.png)|![tooth](./assets/images/tooth_3_gt.png)|![tooth](./assets/images/tooth_4_gt.png)|![tooth](./assets/images/tooth_5_gt.png)|
+|Render|![tooth](./assets/images/tooth_1_rd.png)|![tooth](./assets/images/tooth_2_rd.png)|![tooth](./assets/images/tooth_3_rd.png)|![tooth](./assets/images/tooth_4_rd.png)|![tooth](./assets/images/tooth_5_rd.png)|
 
 ## :heart: 4.Thanks :heart:
 
-Thanks for [VGGT-X](https://github.com/Linketic/VGGT-X) and [3dgs](https://github.com/graphdeco-inria/gaussian-splatting)'s open source works.
+Thanks for [VGGT-X](https://github.com/Linketic/VGGT-X) and [3dgs'](https://github.com/graphdeco-inria/gaussian-splatting) open source works.
+
