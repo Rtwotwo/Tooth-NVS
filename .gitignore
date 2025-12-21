@@ -6,6 +6,3 @@ data/
 
 # ignore logs folder
 logs/
-
-# ignore clones folder
-clones/

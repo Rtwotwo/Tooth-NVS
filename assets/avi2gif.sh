@@ -1,10 +1,10 @@
 #!/bin/bash
 MAX_SIZE_K=5000
 
-for i in {1..5}; do
-    input="tooth_${i}.mp4"
-    output="tooth_${i}.gif"
-    palette="palette_${i}.png"
+for i in {0..5}; do
+    input="./failure/tooth_${i}.mp4"
+    output="./failure/tooth_${i}.gif"
+    palette="./failure/palette_${i}.png"
     echo "正在处理 $input → $output ..."
 
     # 生成全局调色板

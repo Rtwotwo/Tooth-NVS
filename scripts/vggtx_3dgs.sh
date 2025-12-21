@@ -6,8 +6,8 @@ ROOT_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data"
 LOG_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data_vggt_x"
 OUT_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data_3dgs"
 # TOOTH_ID=(0 1 2 3 4 5)
-TOOTH_ID=(8 9)
-GPU=5
+TOOTH_ID=(0)
+GPU=4
 
 
 # 1.提取牙齿的点云,相机参数,图像等信息
