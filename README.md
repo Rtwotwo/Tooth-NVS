@@ -6,7 +6,7 @@ Tooth-NVS mainly uses an end-to-end feedforward model to process captured tooth 
 
 - [x] 1.Complete the extended results of the Nope-Nerf parameter-free novel view synthesis method
 - [x] 2.Update the project display results, including the synthesized point clouds, rendered test images, and the results of PSNR, SSIM and LPIPS metrics
-- [ ] 3.Try to use mediapipe to segment the tooth area 
+- [ ] 3.Try to use mediapipe to segment the tooth area
 - [ ] 4.Attempt to use the depth map for joint Splatting optimization training
 
 ## :mag: 2.Installation :mag:
@@ -29,20 +29,24 @@ bash ./scripts/vggtx_3dgs.sh
 
 We processed four sets of videos, each approximately 20 to 30 seconds long, containing data on teeth and oral cavities for novel view synthesis (NVS). Finally, we obtained a series of effect demonstrations and actual quantitative index test results, including synthesized point clouds, rendering test images, as well as PSNR, SSIM, and LPIPS index results. It can be seen that the novel view synthesis implemented using 3DGS technology performs well in terms of PSNRh and SSIM metrics, indicating low pixel-level reconstruction errors. The synthesized views are highly consistent with real images in terms of local structure, brightness, and contrast. However, in the LPIPS metric, there are phenomena such as blurriness, texture distortion, or loss of high-frequency details, which leaves room for improvement in the metric results.
 
-| Index | PSNR | SSIM | LPIPS |
-|-------|------|------|-------|
-|tooth_1(oral)|29.08313751220703|0.9421060085296631|0.391206294298172|
-|tooth_2(oral)|28.964609146118164|0.9439239501953125|0.370437353849411|
-|tooth_3(tooth)|30.43889808654785|0.9234111309051514|0.4019245207309723|
-|tooth_4(tooth)|30.171770095825195|0.9251460433006287|0.40851619839668274|
-|tooth_5(tooth)|28.754833221435547|0.9476994276046753|0.3846614956855774|
-
 During the SFM process for teeth or oral cavity, Colmap was not used for sparse reconstruction. This was mainly because, considering the reflection of teeth during video shooting and the lack of texture inside the oral cavity, Colmap might extract an insufficient number of key point matches, and it would also take a long time in the subsequent SFM process. Therefore, VGGTx was chosen to replace Colmap for the SFM work. However, as can be seen in the table below, some points in the generated point cloud deviate from the main body. These points formed high-frequency spikes and artifacts after the subsequent 3DGS rendering, so it is considered to filter them out.
 
-| Index| tooth_1| tooth_2| tooth_3| tooth_4| tooth_5|
-|------|--------|--------|--------|--------|--------|
+| Metric       | tooth\_1(oral) | tooth\_2(oral) | tooth\_3(tooth) | tooth\_4(tooth) | tooth\_5(tooth) |
+|--------------|---------------|---------------|----------------|----------------|----------------| 
+| PSNR         | 29.0831       | 28.9646       | 30.4389        | 30.1718        | 28.7548        | 
+| SSIM         | 0.9421        | 0.9439        | 0.9234         | 0.9251         | 0.9477         | 
+| LPIPS        | 0.3912        | 0.3704        | 0.4019         | 0.4085         | 0.3847         |
 |Point Cloud|![tooth_1](assets/media/tooth_1.gif)|![tooth_2](assets/media/tooth_2.gif)|![tooth_3](assets/media/tooth_3.gif)|![tooth_4](assets/media/tooth_4.gif)|![tooth_5](assets/media/tooth_5.gif)|
-| Novel View Synthetic |![tooth_1](assets/tooth_1.gif)|![tooth_2](assets/tooth_2.gif)|![tooth_3](assets/tooth_3.gif)|![tooth_4](assets/tooth_4.gif)|![tooth_5](assets/tooth_5.gif)|
+| 3DGS-NVS |![tooth_1](assets/tooth_1.gif)|![tooth_2](assets/tooth_2.gif)|![tooth_3](assets/tooth_3.gif)|![tooth_4](assets/tooth_4.gif)|![tooth_5](assets/tooth_5.gif)|
+
+At the same time, we also found that when the subject being photographed shakes slightly, the effect reconstructed by 3DGS will have extremely serious artifacts. Meanwhile, the corresponding PSNR, SSIM, and LPIPS indicators will also experience extremely severe declines. The specific situation can be seen in the table below. The reconstruction effect of the same five images is greatly reduced, mainly because VGGT, as an unconstrained collective 3D reconstruction model, uses the estimated camera pose of the first photo of the input model in 3D space as the world coordinate reference system, and the point clouds reconstructed from subsequent images will determine their spatial positions based on this coordinate system. Therefore, when the subject shakes, the pointmaps corresponding to different images will overlap, leading to the generation of artifacts in the NVS stage. At the same time, the number of images used in this failed case itself is relatively small, with approximately only 5 images per group.
+
+| Metric | tooth\_0 | tooth\_1 | tooth\_2 | tooth\_3 | tooth\_4 | tooth\_5 | 
+|--------|---------|---------|---------|---------|---------|---------| 
+| PSNR   | 14.2085 | 13.5412 | 5.9853  | 12.3221 | 16.2400 | 9.8516  | 
+| SSIM   | 0.4058  | 0.5451  | 0.0270  | 0.4459  | 0.4659  | 0.3641  | 
+| LPIPS  | 0.5922  | 0.5699  | 0.6919  | 0.6054  | 0.5493  | 0.6216  |
+| 3DGS-NVS |![tooth_0](./assets/failure/tooth_0.gif)|![tooth_1](./assets/failure/tooth_1.gif)|![tooth_2](./assets/failure/tooth_2.gif)|![tooth_3](./assets/failure/tooth_3.gif)|![tooth_4](./assets/failure/tooth_4.gif)|![tooth_5](./assets/failure/tooth_5.gif)|
 
 ## :heart: 4.Thanks :heart:
 

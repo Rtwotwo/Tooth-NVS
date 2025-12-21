@@ -1,6 +1,6 @@
 """
 Author: Redal
-Date: 2025-11-18
+Date: 2025-12-08
 Todo: use pycolmap to convert video into point cloud
 Homepage: https://github.com/Rtwotwo/3DRepo
 """
@@ -88,9 +88,9 @@ def PycolmapSFM(args, images_dir:str,
 def main():
     # 创建参数解析器
     parser = argparse.ArgumentParser()
-    parser.add_argument("--video_path", type=str, default="./logs/tooth_9.mp4", help="Video path")
+    parser.add_argument("--video_path", type=str, default="./logs/tooth_11.mp4", help="Video path")
     parser.add_argument("--skip_frames", type=int, default=1, help="Skip frames")
-    parser.add_argument("--frames_path", type=str,  default="./logs/data/tooth_9/images", help="Output path")
+    parser.add_argument("--frames_path", type=str,  default="./logs/data/tooth_11/images", help="Output path")
     parser.add_argument("--points_path", type=str, default="./logs/data/tooth_8/points", help="Output path")
     parser.add_argument("--dense_path", type=str, default="./logs/data/tooth_8/dense", help="Output path")
     parser.add_argument("--database_path", type=str, default="./logs/data/tooth_8/database.db", help="Database path")

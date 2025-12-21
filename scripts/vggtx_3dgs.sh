@@ -6,7 +6,7 @@ ROOT_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data"
 LOG_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data_vggt_x"
 OUT_DIR="/data2/dataset/Redal/work_tooth_nvs/logs/data_3dgs"
 # TOOTH_ID=(0 1 2 3 4 5)
-TOOTH_ID=(0)
+TOOTH_ID=(11)
 GPU=4
 
 
@@ -48,4 +48,3 @@ for id in "${TOOTH_ID[@]}"; do
         -m "${output_dir}" 
 done
 echo "[INFO] 所有场景渲染测试完成!"
-
