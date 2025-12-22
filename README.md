@@ -7,7 +7,7 @@ Tooth-NVS mainly uses an end-to-end feedforward model to process captured tooth 
 - [x] 1.Complete the extended results of the Nope-Nerf parameter-free novel view synthesis method
 - [x] 2.Update the project display results, including the synthesized point clouds, rendered test images, and the results of PSNR, SSIM and LPIPS metrics
 - [ ] 3.Try to use mediapipe to segment the tooth area
-- [ ] 4.Attempt to use the depth map for joint Splatting optimization training
+- [ ] 4.Try using the depthanything model for point cloud reconstruction tasks
 
 ## :mag: 2.Installation :mag:
 
